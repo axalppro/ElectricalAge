@@ -9,6 +9,10 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
+        maven {
+            name = "eclipse"
+            url = "https://maven.covertdragon.team/repository/internal"
+        }
         jcenter()
     }
     dependencies {
