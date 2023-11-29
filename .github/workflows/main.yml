@@ -23,10 +23,16 @@ jobs:
         run: |
           docker run \
             --rm \
-            -v "$(pwd)":/repo \
+            -v "$(pwd)":/app \
             ghcr.io/axalppro/build_repo:latest
 
       - name: Search For Jar File
         run: |
           ls build/libs \
             ls
+            
+			- name: Upload JAR artifact
+      	uses: actions/upload-artifact@v2
+      	with:
+					name: ELN_mod
+					path: build/libs/*.jar
