@@ -23,9 +23,8 @@ jobs:
         run: |
           docker run \
             --rm \
-            -v "$(pwd)":/app \
-            ghcr.io/axalppro/build_repo:latest \
-            "ls"
+            -v "$(pwd)":/repo \
+            ghcr.io/axalppro/build_repo:latest
 
       - name: Search For Jar File
         run: |
