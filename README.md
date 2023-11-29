@@ -1,5 +1,3 @@
-test travis
-
 # Minecraft Mod - Codename : ELN
 
 [![Build Status](https://travis-ci.org/Electrical-Age/ElectricalAge.svg?branch=1.7.10-MNA)](https://travis-ci.org/Electrical-Age/ElectricalAge)
