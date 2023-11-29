@@ -1,0 +1,29 @@
+name: Build on Push
+
+on:
+  push:
+    branches:
+      - docker_test
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Pull Docker Image
+        run: docker pull ghcr.io/axalppro/build_repo:latest
+
+      - name: Run Docker Container
+        run: |
+          docker run \
+            --rm \
+            -v "$(pwd)":/app \
+            ghcr.io/axalppro/build_repo:latest
+
+      - name: Search For Jar File
+        run: |
+          ls build/libs \
+            ls
