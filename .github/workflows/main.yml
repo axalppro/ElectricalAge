@@ -13,6 +13,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
+      - name: Log in to Docker Registry
+        run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login ghcr.io -u ${{ secrets.DOCKER_USERNAME }} --password-stdin
+
       - name: Pull Docker Image
         run: docker pull ghcr.io/axalppro/build_repo:latest
 
