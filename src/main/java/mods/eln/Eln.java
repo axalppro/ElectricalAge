@@ -4765,7 +4765,7 @@ public class Eln {
 
             BatteryItem desc = new BatteryItem(
                 name,
-                40000, 500, 100,// double energyStorage,double
+                20000, 500, 100,// double energyStorage,double
                 // chargePower,double dischargePower,
                 2// int priority
             );
@@ -4778,7 +4778,7 @@ public class Eln {
 
             BatteryItem desc = new BatteryItem(
                 name,
-                120000, 1500, 300,// double energyStorage,double
+                60000, 1500, 300,// double energyStorage,double
                 // chargePower,double dischargePower,
                 2// int priority
             );

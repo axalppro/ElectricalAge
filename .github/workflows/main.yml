@@ -3,7 +3,7 @@ name: Build on Push
 on:
   push:
     branches:
-      - workflow
+      - develop
 
 jobs:
   build:
@@ -27,9 +27,9 @@ jobs:
         run: |
           ls build/libs
           ls
-
+          
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: ELN_mod
           path: build/libs/*.jar
