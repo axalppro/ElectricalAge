@@ -2,8 +2,8 @@ name: Build on Push
 
 on:
   push:
-    branches:
-      - develop
+    tags:
+    - '*'
 
 jobs:
   build:
